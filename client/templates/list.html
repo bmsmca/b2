@@ -1,0 +1,33 @@
+<div  ng-init="getinsurance()">
+	<p >insurance List</p>
+	<div >
+		<table border = 1 >
+			<thead>
+			<tr>
+			  <th>policy No.</th>
+			  <th>policy Name</th>
+			  <th>Period</th>
+			  <th>Customer Name</th>
+			  <th>Address</th>
+			  <th>Contact</th>
+			  <th>Actions</th>
+			</tr>
+			</thead>
+			<tbody>
+			<tr ng-repeat="insur in insurance">
+			  <td>{{ insur.policy_no }}</td>
+			  <td>{{ insur.name }}</td>
+			  <td>{{ insur.period }}</td>
+			  <td>{{ insur.customer_name }}</td>
+			  <td>{{ insur.customer_address }}</td>
+			  <td>{{ insur.customer_contact }}</td>
+			  <td> 
+			    <a href="#/insurance/{{insur._id}}/show" style="text-decoration:none;"> View  </a>
+			    <a href="#/insurance/{{insur._id}}/edit" style="text-decoration:none;"> Update  </a>
+			  	<a ng-click="deleteinsurance(insur._id)" style="text-decoration:none;"> Delete </a>
+			  </td>
+			</tr>
+			</tbody>
+		</table>		
+    <div>
+<div>

@@ -1,0 +1,51 @@
+<div  ng-init="showinsurance()">
+<p>Edit insurance</p>
+	<div >
+
+    
+		<form ng-submit="updateinsurance()">
+    <div >
+      Policy No: 
+      <input type="text"  value="insurance.policy_no" ng-model="insurance.policy_no" >
+    </div>
+
+    <div >
+      Policy Name:
+      <select value="insurance.name"  ng-model="insurance.name">
+        <option> CAR Insurace</option>
+        <option> Bike Insurance</option>
+        <option> Health Insurance</option>
+        <option> Pet Insurance</option>
+      </select>
+    </div>
+
+    <div >
+      Period:
+        <select  value="insurance.period" ng-model="insurance.period">
+        <option> 1</option>
+        <option> 2</option>
+        <option> 3</option>
+        <option> 4</option>
+        <option> 5</option>
+        </select> 
+    </div>
+
+    <div >
+      Customer Name:
+      <input type="text" value="insurance.customer_name" ng-model="insurance.customer_name" >
+    </div>
+
+    <div >
+        Customer Address:
+        <input type="text" value="insurance.customer_address" ng-model="insurance.customer_address">
+    </div>
+    <div >
+        Customer contact:
+        <input type="text" value="insurance.customer_contact" ng-model="insurance.customer_contact">
+    </div>
+
+    <button type="submit"  >Update</button>
+    <a href="#/insurance" > Cancel</a>
+</form>		
+    <div>
+<div>
